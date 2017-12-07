@@ -1,19 +1,23 @@
 import argparse
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Advent of Code - Day 1')
-    parser.add_argument("input")
-    args = parser.parse_args()
+    total_1 = 0
+    total_2 = 0
+    input = ''
 
-    values = list(map(int, args.input))
-    total = 0
+    with open('input.txt') as file:
+        input = file.read().strip()
 
-    for index, value in enumerate(values[:-1]):
-        if value == values[index+1]:
-            total += value
+    values = list(map(int, input))
+    step = int(len(values)/2)
 
-    if values[0] == values[-1]:
-        total += values[0]
+    for index, value in enumerate(values):
+        if value == values[(index+1) % len(values)]:
+            total_1 += value
 
-    print(total)
+        if value == values[(index + step) % len(values)]:
+            total_2 += value
+
+    print(total_1)
+    print(total_2)
 
