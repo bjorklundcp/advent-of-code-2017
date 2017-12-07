@@ -16,6 +16,6 @@ if __name__ == '__main__':
         if value == values[(index + step) % len(values)]:
             total_2 += value
 
-    print(total_1)
-    print(total_2)
+    print('part 1:', total_1)
+    print('part 2:', total_2)
 
