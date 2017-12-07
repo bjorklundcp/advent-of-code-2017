@@ -1,5 +1,3 @@
-import argparse
-
 if __name__ == '__main__':
     total_1 = 0
     total_2 = 0

@@ -1,14 +1,9 @@
-import argparse
 import itertools
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Advent of Code - Day 2')
-    parser.add_argument("file")
-    args = parser.parse_args()
-
     final_1 = 0
     final_2 = 0
-    with open(args.file) as file:
+    with open('input.txt') as file:
         for line in file:
             values = list(map(int, line.strip().split('\t')))
             final_1 += max(values) - min(values)
