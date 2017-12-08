@@ -11,6 +11,6 @@ if __name__ == '__main__':
                 if max(iter) % min(iter) == 0:
                     final_2 += int(max(iter) / min(iter))
 
-    print("part 1:", final_1)
-    print("part 2:", final_2)
+    print('part 1:', final_1)
+    print('part 2:', final_2)
 
