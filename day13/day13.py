@@ -27,7 +27,7 @@ def attempt_run(firewall, break_early = False):
     return severity
 
 if __name__ == '__main__':
-    with open('charlie_input.txt') as file:
+    with open('input.txt') as file:
         firewall = {}
         for line in file:
             depth, in_range = line.strip().split()
@@ -59,10 +59,16 @@ if __name__ == '__main__':
         #         'move_down': False
         #     }
         # }
-        print('part 1', attempt_run(copy.deepcopy(firewall)))
+        # print('part 1', attempt_run(copy.deepcopy(firewall)))
 
         delay = 0
         not_done = True
+
+        # for n in range(0, 3966414):
+        #     print(n)
+        #     firewall = cycle_scanners(firewall)
+
+        # print(attempt_run(firewall, True))
 
         while not_done:
             if attempt_run(copy.deepcopy(firewall), True) == 0:
